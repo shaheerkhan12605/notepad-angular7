@@ -1,0 +1,15 @@
+<div class="container" style="margin-top:100px;">
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <textarea [froalaEditor] formControlName="formModel"></textarea>
+        <button class="btn btn-success btn-sm pull-right" style="margin-top:20px;" type="submit">Save</button>
+      </form>
+</div>
+<div class="container" style="margin-top:100px;">
+  <h1>Notes</h1>
+  <div *ngIf="notes.length > 0">
+    <div *ngFor="let note of notes; let i = index;">
+        <span *ngIf="timestamp.length > 0">{{timestamp[i] | date :'mediumTime' }}</span>
+      <span [innerHtml]="note | style"></span>
+    </div>
+  </div>
+</div>
