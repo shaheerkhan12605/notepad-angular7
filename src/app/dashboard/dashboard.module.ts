@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
+import { HttpClientModule} from '@angular/common/http';
+import { AngularEditorModule } from '@kolkov/angular-editor';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StylePipe } from 'src/app/pipes/style.pipe';
 
@@ -14,9 +16,9 @@ import { HomeComponent } from './home/home.component';
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    FroalaEditorModule.forRoot(),
-    FroalaViewModule.forRoot(),
-    DashboardRoutingModule,
+    HttpClientModule,
+    AngularEditorModule,
+    DashboardRoutingModule
   ]
 })
 export class DashboardModule { }
