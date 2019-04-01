@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   editorConfig: AngularEditorConfig = {
     editable: true,
     spellcheck: true,
-    height: '25rem',
+    height: '450px',
     minHeight: '5rem',
     placeholder: 'Enter text here...',
     translate: 'no',
