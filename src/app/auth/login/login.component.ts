@@ -10,7 +10,7 @@ declare var $: any;
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
-  constructor(private userService: UsersService, private formBuilder: FormBuilder, private router:Router) {
+  constructor(private userService: UsersService, private formBuilder: FormBuilder, private router: Router) {
   }
   ngOnInit() {
     this.userService.updateAuthStatus(false);
@@ -30,8 +30,8 @@ export class LoginComponent implements OnInit {
     }
     this.userService.updateAuthStatus(true);
     this.router.navigate(['home']);
-
   }
   login() {
     console.log('loggedin');
   }
+}

@@ -78,6 +78,28 @@
             </div>
           </form>
           <!-- form END HERE-->
+          <file-drop (onFileDrop)="dropped($event)" dropZoneClassName="my-style"
+          (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)" multiple="false" browseBtnLabel="Upload Image" [showBrowseBtn]="true">
+          <!-- <span>optional content (don't set dropZoneLabel then)</span> -->
+        </file-drop>
+          <div class="center">
+            <div class="upload-table">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                        </tr>
+                    </thead>
+                    <tbody class="upload-name-style">
+                        <tr *ngFor="let item of files; let i=index">
+                            <td><strong>{{ item.relativePath }}</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+          
+          <!--  -->
         </div>
       </div>
     </div>
