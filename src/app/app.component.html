@@ -1,7 +1,7 @@
-<!-- <span *ngIf="isLoggedIn === false">
+<span *ngIf="isLoggedIn === false">
     <router-outlet></router-outlet>
-  </span> -->
-  <div class="wrapper">
+  </span>
+  <div class="wrapper" *ngIf="isLoggedIn === true">
     <app-sidebar></app-sidebar>
     <div class="main-panel">
       <app-navbar></app-navbar>

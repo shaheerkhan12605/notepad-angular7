@@ -24,10 +24,10 @@
             ],
             "styles": [
               "src/styles.css",
+              "src/assets/css/material-dashboard.min40a0.css",
               "node_modules/froala-editor/css/froala_editor.pkgd.min.css",
               "node_modules/froala-editor/css/froala_style.min.css",
               "src/assets/font-awesome/latest/css/font-awesome.min.css",
-              "src/assets/css/material-dashboard.min40a0.css",
               "src/assets/demo/demo.css"          
             ],
             "scripts": [
@@ -35,10 +35,10 @@
               "src/assets/js/core/popper.min.js",
               "src/assets/js/core/bootstrap-material-design.min.js",
               "src/assets/js/plugins/perfect-scrollbar.jquery.min.js",
+              "src/assets/js/plugins/jquery.bootstrap-wizard.js",
               "src/assets/js/plugins/moment.min.js",
               "src/assets/js/plugins/sweetalert2.js",
               "src/assets/js/plugins/jquery.validate.min.js",
-              "src/assets/js/plugins/jquery.bootstrap-wizard.js",
               "src/assets/js/plugins/bootstrap-selectpicker.js",
               "src/assets/js/plugins/bootstrap-datetimepicker.min.js",
               "src/assets/js/plugins/jquery.dataTables.min.js",

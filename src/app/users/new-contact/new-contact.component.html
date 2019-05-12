@@ -1,0 +1,85 @@
+<div class="content">
+  <div class="content">
+    <div class="container-fluid">
+      <div class="col-md-8 col-12 mr-auto ml-auto">
+        <!--      Wizard container        -->
+        <div class="wizard-container">
+          <!-- FORM Starting point   -->
+          <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <div class="card card-login">
+              <div class="card-header card-header-primary text-center">
+                <h4 class="card-title">Login</h4>
+              </div>
+              <div class="card-body">
+                <div class="tab-content">
+                  <div class="tab-pane active">
+                    <div class="row justify-content-center">
+                      <div class="col-sm-8">
+                        <div class="input-group form-control-lg">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="material-icons">face</i>
+                            </span>
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInput1" class="bmd-label-floating"> Name </label>
+                            <input type="text" class="form-control" id="exampleInput1" formControlName="name" name="firstname" required>
+                            <div class="invalid" *ngIf="form.name.invalid && form.name.touched && form.name.errors && form.name.errors.required">
+                              <small> 
+                                Name is required  
+                              </small>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="input-group form-control-lg">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="material-icons">phone</i>
+                            </span>
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInput11" class="bmd-label-floating">Phone </label>
+                            <input type="text" class="form-control" id="exampleInput11" formControlName="phone"  name="lastname" required>
+                            <div  class="invalid" *ngIf="form.phone.invalid && form.phone.touched && form.phone.errors && form.phone.errors.required">
+                              <small> 
+                                Phone number is required 
+                              </small>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="input-group form-control-lg">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text">
+                              <i class="material-icons">email</i>
+                            </span>
+                          </div>
+                          <div class="form-group">
+                            <label for="exampleInput1" class="bmd-label-floating">Email</label>
+                            <input type="email" class="form-control" id="exampleemalil" formControlName="email"  name="email" required>
+                            <div  class="invalid" *ngIf="form.email.invalid && form.email.touched">
+                              <small *ngIf="form.email.errors.required"> 
+                                Email is required
+                              </small>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <div class="ml-auto">
+                      <!-- <input type="submit" class="btn btn-next btn-fill btn-primary btn-wd" name="next" value="Save"> -->
+                      <input type="submit" class="btn btn-next btn-fill btn-primary btn-wd" name="next" [disabled]="!contactForm.valid" value="Save">
+                    </div>
+                    <div class="clearfix"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          <!-- form END HERE-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

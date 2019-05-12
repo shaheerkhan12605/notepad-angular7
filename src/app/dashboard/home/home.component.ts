@@ -1,6 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AngularEditorConfig } from '@kolkov/angular-editor';
+import { UsersService } from 'src/app/shared-services/users/users.service';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,7 @@ export class HomeComponent implements OnInit {
   editorConfig: AngularEditorConfig = {
     editable: true,
     spellcheck: true,
-    height: '450px',
+    height: '350px',
     minHeight: '5rem',
     placeholder: 'Enter text here...',
     translate: 'no',
@@ -35,9 +36,10 @@ export class HomeComponent implements OnInit {
       },
     ]
   };
-  constructor(private formBuilder: FormBuilder) { }
-
+  constructor(private formBuilder: FormBuilder , private sharedService: UsersService) {
+  }
   ngOnInit() {
+    this.sharedService.updateAuthStatus(true);
     this.form = this.formBuilder.group({
       formModel: ['', Validators.required]
     });

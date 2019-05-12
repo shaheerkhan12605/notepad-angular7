@@ -2,6 +2,7 @@
 
 /* Material Icons  */
 /* fallback */
+@import "~ngx-smart-modal/ngx-smart-modal";
 @import '~perfect-scrollbar/css/perfect-scrollbar.css';
 @font-face {
     font-family: 'Material Icons';
@@ -26,3 +27,7 @@
     -moz-osx-font-smoothing: grayscale;
   }
   
+  .invalid{
+    color: red;
+    font-size: 12px;
+  }

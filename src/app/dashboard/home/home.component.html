@@ -1,14 +1,14 @@
 <div class="container" style="margin-top:100px;margin-left: 20px;">
   <div class="row">
-    <div class="col-md-7">
-      <form [formGroup]="form" >
-        <angular-editor id="editor1" formControlName="formModel" [config]="editorConfig"></angular-editor>
+    <div class="col-md-7 custom-height">
+      <form [formGroup]="form" class="custom-height" >
+        <angular-editor id="editor1" formControlName="formModel" class="custom-height"  [config]="editorConfig"></angular-editor>
       </form>
       <button class="btn btn-primary pull-right" (click)="onSubmit()">Save</button>
     </div>
     <div class="col-md-4">
         <h4>Notes</h4>
-        <div class="ps" style="position: relative;max-height: 450px;" [perfectScrollbar]="config">
+        <div class="ps" style="position: relative;max-height:450px;" [perfectScrollbar]="config">
           <div *ngIf="notes.length > 0">
             <div class="card" *ngFor="let note of notes; let i = index;">
                 <div class="row card-header card-header-text card-header-primary">
