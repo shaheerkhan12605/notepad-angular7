@@ -6,6 +6,7 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class UsersService {
   users = new BehaviorSubject(null);
+  showProfileBar = new BehaviorSubject(false);
   contacts = [{
     name: 'Shaheer',
     phone: '03075506078',
@@ -45,6 +46,12 @@ export class UsersService {
   }
   getUser() {
     return this.users;
+  }
+  updateShowProfileBarStatus(status) {
+    this.showProfileBar.next(status);
+  }
+  getShowProfileBarStatus() {
+    return this.showProfileBar;
   }
   updateAuthStatus(status) {
     this.isAuthenticated.next(status);

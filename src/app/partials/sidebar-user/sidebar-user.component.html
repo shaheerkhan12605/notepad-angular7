@@ -1,0 +1,74 @@
+<div class="sidebar" data-color="rose" data-background-color="black">
+
+  <div class="logo">
+    <a>
+      <div class="container container-custom">
+        <i class="material-icons" (click)="hideProfileBar()">arrow_back</i>
+        <span class="m-l-20">
+          Profile
+        </span>
+      </div>
+    </a>
+  </div>
+
+
+  <div class="user user-custom">
+    <div class="photo photo-custom">
+      <img src="../assets/img/faces/avatar.jpg" />
+    </div>
+    <!-- <div class="user-info">
+      <a class="username">
+        <span>
+          Tania Andrew
+        </span>
+      </a>
+    </div> -->
+  </div>
+  <div class="sidebar-wrapper">
+  <div class="ps" style="position: relative;max-height:350px;" [perfectScrollbar]="config">
+    <ul class="nav">
+      <div class="user">
+        <div class="user-info m-l-20">
+          <a class="username">
+            <span style="font-family: cursive;">
+              Your Name
+            </span>
+          </a>
+          <a class="username">
+            <span style="font-size:20px;font-family: cursive;">
+              Tania Andrew
+            </span>
+          </a>
+        </div>
+        <hr>
+        <div class="user-info m-l-20 m-t-10">
+          <a class="username">
+            <span style="font-family: cursive;">
+              Your Email
+            </span>
+          </a>
+          <a class="username">
+            <span style="font-size: 15px;font-family: cursive;">
+              tania.andrew@material.com
+            </span>
+          </a>
+        </div>
+        <hr>
+        <div class="user-info m-l-20 m-t-10">
+          <a class="username">
+            <span style="font-family: cursive;">
+              Phone Number
+            </span>
+          </a>
+          <a class="username">
+            <span style="font-size: 15px;font-family: cursive;">
+              +1 6736739730
+            </span>
+          </a>
+        </div>
+      </div>
+    </ul>
+  </div>
+  </div>
+
+</div>

@@ -11,8 +11,8 @@
   </div>
 
   <div class="sidebar-wrapper">
-
-    <div class="user">
+    
+    <div class="user" (click)="showProfileBar()">
       <div class="photo">
         <img src="../assets/img/faces/avatar.jpg" />
       </div>
@@ -24,8 +24,10 @@
         </a>
       </div>
     </div>
+    
+  <div class="ps" style="position: relative;max-height:350px;" [perfectScrollbar]="config">
     <ul class="nav">
-
+  
       <div class="user contacts" *ngFor="let contact of contacts">
         <div class="photo">
           <img src="{{contact.img}}" />
@@ -40,7 +42,7 @@
       </div>
       <!-- <button (click)="ngxSmartModalService.getModal('myModal').open()">Open myModal</button> -->
     </ul>
-
+  </div>
   </div>
   <!-- <ngx-smart-modal #myModal identifier="myModal">
     <h1>Title</h1>

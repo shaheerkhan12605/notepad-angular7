@@ -16,5 +16,9 @@ export class SidebarComponent implements OnInit {
 
   ngOnInit() {
   }
+  showProfileBar(){
+    console.log('in here ');
+    this.userService.updateShowProfileBarStatus(true);
+  }
 
 }

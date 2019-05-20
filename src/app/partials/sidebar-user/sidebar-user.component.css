@@ -1,0 +1,48 @@
+.container-custom{
+    color: white;
+    padding-top: 30px;
+    background: gray;
+    padding-bottom: 40px;
+}
+.sidebar {
+    background-image: url("src/assets/img/sidebar-1.jpg");
+}
+.user-custom {
+    margin-top: 30px;
+    position: absolute;
+    padding-bottom: 30px;
+    position: unset;
+}
+.sidebar .user{
+    margin-top: 30px;
+    position: unset;
+}
+.m-l-20{
+    margin-left: 20px;
+}
+.photo.photo-custom{
+    height: 200px;
+    width: 200px;
+}
+
+.sidebar .logo{
+    padding-top: 0;
+    position: unset;
+}
+.sidebar .logo:after, .sidebar .user:after {
+    content: '';
+    background-color: rgba(180,180,180,.3);
+    right: 0px;
+    bottom: 0;
+}
+
+.sidebar .user.contacts{
+    padding-bottom: 10px !important;
+    margin-top: 10px !important;
+}
+.m-t-10 {
+    margin-top: 10px;
+}
+.nav{
+    background: gray;
+}

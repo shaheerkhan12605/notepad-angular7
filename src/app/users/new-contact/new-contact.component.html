@@ -14,6 +14,13 @@
                 <div class="tab-content">
                   <div class="tab-pane active">
                     <div class="row justify-content-center">
+                      <div class="col-sm-4">
+                        <img src="../../../assets/img/default-avatar.png">
+                          <file-drop (onFileDrop)="dropped($event)" dropZoneClassName="my-style"
+                          (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)" multiple="false" browseBtnLabel="Upload Image" [showBrowseBtn]="true">
+                          <!-- <span>optional content (don't set dropZoneLabel then)</span> -->
+                        </file-drop>
+                      </div>
                       <div class="col-sm-8">
                         <div class="input-group form-control-lg">
                           <div class="input-group-prepend">
@@ -78,26 +85,6 @@
             </div>
           </form>
           <!-- form END HERE-->
-          <file-drop (onFileDrop)="dropped($event)" dropZoneClassName="my-style"
-          (onFileOver)="fileOver($event)" (onFileLeave)="fileLeave($event)" multiple="false" browseBtnLabel="Upload Image" [showBrowseBtn]="true">
-          <!-- <span>optional content (don't set dropZoneLabel then)</span> -->
-        </file-drop>
-          <div class="center">
-            <div class="upload-table">
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                        </tr>
-                    </thead>
-                    <tbody class="upload-name-style">
-                        <tr *ngFor="let item of files; let i=index">
-                            <td><strong>{{ item.relativePath }}</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
           
           <!--  -->
         </div>
